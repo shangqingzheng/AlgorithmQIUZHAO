@@ -16,7 +16,7 @@ class Node {
     }
 };
 */
-
+//迭代方式
 class Solution {
     public List<Integer> preorder(Node root) {
         //跟后续遍历思路一样还是使用 栈和队列。
@@ -44,6 +44,22 @@ class Solution {
                 }
             }
 
+        }
+        return res;
+    }
+}
+
+//递归方式
+class Solution {
+    ArrayList<Integer> res = new ArrayList<Integer>();
+    public List<Integer> preorder(Node root) {
+        if (root != null) {
+            res.add(root.val);
+            if (root.children != null) {
+                for(Node item: root.children) {
+                    preorder(item);
+                }
+            }
         }
         return res;
     }
