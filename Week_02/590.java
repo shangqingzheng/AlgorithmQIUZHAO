@@ -47,3 +47,16 @@ class Solution {
     }
 }
 
+//递归方式
+class Solution {
+    ArrayList<Integer> res = new ArrayList<Integer>();
+    public List<Integer> postorder(Node root) {
+       if (root != null) {
+           for(Node item: root.children) {
+               postorder(item);
+           }
+           res.add(root.val);
+       }
+       return res;
+    }
+}
