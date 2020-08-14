@@ -1,4 +1,6 @@
 class Solution {
+	//把环状分解成两个单列，选择第一个[0:n-1]，不选则第一个[1:n]
+	//选择最大值
     public int rob(int[] nums) {
         if(nums.length == 0) return 0;
         if(nums.length == 1) return nums[0];
